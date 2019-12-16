@@ -28,8 +28,7 @@
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous">
     </script> 
-    <!-- javascript link -->
-    <script type="text/javascript" src="script.js"></script>  
+    
   </head>
 
   <body>
@@ -37,34 +36,22 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
     </header>
+   
     <div class="container text-center h3 currentDay">
-        <!-- Current Day is here -->
+        <!-- Current Day is here via moment.js -->
     </div>
-    <div id="calendar"></div>
+   
     <div class="card border border-dark offset-lg-2 col-lg-8 mb-5" >
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">7:00 <span>AM</span> </li>
-            <li class="list-group-item">8:00 <span>AM</span> </li>
-            <li class="list-group-item">9:00 <span>AM</span> </li>            
-            <li class="list-group-item">10:00 <span>AM</span> </li>                
-            <li class="list-group-item">11:00 <span>AM</span> </li>                
-            <li class="list-group-item">12:00 <span>PM</span> </li>               
-            <li class="list-group-item">1:00 <span>PM</span> </li>               
-            <li class="list-group-item">2:00 <span>PM</span> </li>                
-            <li class="list-group-item">3:00 <span>PM</span> </li>                
-            <li class="list-group-item">4:00 <span>PM</span> </li>                
-            <li class="list-group-item">5:00 <span>PM</span> </li>                
-            <li class="list-group-item">6:00 <span>PM</span> </li>                
-            <li class="list-group-item">7:00 <span>PM</span> </li>              
-            <li class="list-group-item">8:00 <span>PM</span> </li>
-            <li class="list-group-item">9:00 <span>PM</span> </li>
+        <ul id="calendar" class="list-group list-group-flush">
+            <!-- jQuery function will put the list items here -->
         </ul>
     </div>
 
     
 
 
-  
+    <!-- javascript link -->
+    <script type="text/javascript" src="script.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   </body>
 </html>
