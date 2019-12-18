@@ -5,6 +5,9 @@ console.log(currentTime);
 
 $(document).ready(function(){
     $('.currentDay').text(currentDay);
+    let displayText = localStorage.getItem('time-slot-6');
+    // $('#input').value = displayText;
+    alert(displayText);
 });
 
 
@@ -46,9 +49,7 @@ $('.btn').click(function(){
     // make these variables then add them to the inputText variable
     let grabID = $(this).parent().attr('id');
     let grabValue = $(this).siblings('input').val();
-
     localStorage.setItem(grabID, grabValue);
-    
 });
 
 
