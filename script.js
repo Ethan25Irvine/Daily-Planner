@@ -1,31 +1,23 @@
 // This will be our current time 
 let currentDay = moment().format('MMMM Do YYYY');
-let currentTime = moment().format('h a');
+let currentTime = moment().format('HH');
 console.log(currentTime);
 
-$(document).ready(function(){
-    $('.currentDay').text(currentDay);
-    let displayText = localStorage.getItem('time-slot-6');
-    // $('#input').value = displayText;
-    alert(displayText);
-});
-
-
-
-function presentColor(){
-    $('.list-group-item').css('background-color', 'rgb(176, 241, 255)').css('color', 'white');
-}
-
-function pastColor(){
-    $('.list-group-item').css('background-color', '#bbbbbb').css('color', 'white');
-}
-
-
-// this is our html for the calendar just adjust start_time and/or end_time to change the times
 let time_slots = [];
 let start_time = 6;
 let end_time = 18;
 
+console.log(currentTime);
+
+$(document).ready(function(){
+    $('.currentDay').text(currentDay);
+    for( let i = start_time ; i <= end_time ; i++ ){
+        console.log(localStorage.getItem('time-slot-' + i ));
+        $('#time-slot-' + i + ' input').val(localStorage.getItem('time-slot-' + i ));
+    }
+});
+
+// this is our html for the calendar just adjust start_time and/or end_time to change the times
 for( let i = start_time ; i <= end_time ; i++ ){
 	let suffix = 'AM';
     let hour = i;
@@ -38,9 +30,16 @@ for( let i = start_time ; i <= end_time ; i++ ){
 }
 
 time_slots.forEach( function( item, index){
-	$( '#calendar').append('<li class="list-group-item " id="time-slot-' + index + ' ">' + item +': <input type="text" id="input"></input><button type="button" class="btn col-lg-1 ml-1 btn-dark">Save</button></li>' );
-    console.log ( "hour: " + index + ", pretty display: " + item );
+    let bgClass = ' past';
+    if (index==currentTime){
+        bgClass = ' present';
+    } 
+    if (index>currentTime){
+        bgClass = ' future';
+    } 
+	$( '#calendar').append('<li class="list-group-item' + bgClass +'" id="time-slot-' + index + '">' + item +': <input type="text" id="input"></input><button type="button" class="btn col-sm-1 col-md-1 col-lg-1 ml-1 btn-dark">Save</button></li>' );
    
+   console.log(index)
 });
 
 

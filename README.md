@@ -18,7 +18,7 @@ Logic for the time moving accordingly via the colors that declare past/present/f
     } else if {
         bg-color === $('.past);
     }
-
+    set default to current 
 Logic for the save button 
 Logic for the save button 
 

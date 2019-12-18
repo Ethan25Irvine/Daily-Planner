@@ -48,13 +48,13 @@ body {
   }
   
   .present {
-    background-color: #ff6961;
+    background-color: #86ffe5;
     color: white;
   }
   
   .future {
-    background-color: #77dd77;
-    color: white;
+    background-color: #ffffff;
+    color: black;
   }
   
   .saveBtn {
