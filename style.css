@@ -43,7 +43,7 @@ body {
   }
   
   .past {
-    background-color: #d3d3d3;
+    background-color: #bbbbbb;
     color: white;
   }
   
@@ -61,7 +61,7 @@ body {
     border-left: 1px solid black;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    background-color: #06AED5;
+    background-color: rgb(176, 241, 255);
     color: white;
   }
   
@@ -73,6 +73,7 @@ body {
   .list-group-item span {
       color: #06AED5;
   }
+  
   input[type=text] {
     width: 80%;
     border: 0px;
