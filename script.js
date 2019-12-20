@@ -7,8 +7,6 @@ let time_slots = [];
 let start_time = 6;
 let end_time = 18;
 
-console.log(currentTime);
-
 $(document).ready(function(){
     $('.currentDay').text(currentDay);
     for( let i = start_time ; i <= end_time ; i++ ){
@@ -37,11 +35,10 @@ time_slots.forEach( function( item, index){
     if (index>currentTime){
         bgClass = ' future';
     } 
-	$( '#calendar').append('<li class="list-group-item' + bgClass +'" id="time-slot-' + index + '">' + item +': <input type="text" id="input"></input><button type="button" class="btn col-sm-1 col-md-1 col-lg-1 ml-1 btn-dark">Save</button></li>' );
+	$( '#calendar').append('<li class=" col-sm-12 col-md-12 col-lg-12 list-group-item' + bgClass +'" id="time-slot-' + index + '">' + item +': <input type="text" class=" col-sm-8 col-md-8 col-lg-9" id="input"></input><button type="button" class="btn col-sm-2 col-md-2 col-lg-1 ml-1 btn-dark">Save</button></li>' );
    
    console.log(index)
 });
-
 
 // save to localserver
 $('.btn').click(function(){

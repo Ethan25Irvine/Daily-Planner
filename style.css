@@ -73,8 +73,4 @@ body {
   .list-group-item span {
       color: #06AED5;
   }
-  
-  input[type=text] {
-    width: 80%;
-    border: 0px;
- }
+
